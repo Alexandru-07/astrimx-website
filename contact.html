@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Document metadata and shared styles -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AstrimX Inc - Contact</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="contact">
+    <!-- Header: brand identity and primary navigation -->
+    <header class="site-header">
+        <div class="shell">
+            <!-- Brand lockup -->
+            <div class="brand">
+                <a href="index.html" class="brand__link" data-i18n="brand.name">AstrimX Inc</a>
+                <p class="brand__tagline" data-i18n="brand.tagline">Tailored digital experiences for bold ideas</p>
+            </div>
+            <!-- Header controls: navigation and language switch -->
+            <div class="header-controls">
+                <!-- Primary navigation links -->
+                <nav class="site-nav" aria-label="Primary navigation">
+                    <ul class="site-nav__list">
+                        <li class="site-nav__item">
+                            <a class="site-nav__link" href="index.html" data-i18n="nav.home">Home</a>
+                        </li>
+                        <li class="site-nav__item">
+                            <a class="site-nav__link" href="about.html" data-i18n="nav.about">About</a>
+                        </li>
+                        <li class="site-nav__item">
+                            <a class="site-nav__link" href="pricing.html" data-i18n="nav.pricing">Pricing</a>
+                        </li>
+                        <li class="site-nav__item site-nav__item--current">
+                            <a class="site-nav__link" href="contact.html" aria-current="page" data-i18n="nav.contact">Contact</a>
+                        </li>
+                    </ul>
+                    <!-- Screen reader helper to announce current page -->
+                    <p class="sr-only" data-i18n-current aria-live="polite">Currently viewing: Contact</p>
+                </nav>
+                <!-- Language selector toggles -->
+                <div class="language-toggle" role="group" aria-label="Language selection">
+                    <button type="button" class="language-toggle__button is-active" data-lang="en">EN</button>
+                    <button type="button" class="language-toggle__button" data-lang="ro">RO</button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Main content: hero, contact channels, and reassurance -->
+    <main>
+        <!-- Hero section invites collaboration -->
+        <section class="hero hero--subpage">
+            <div class="shell">
+                <p class="eyebrow" data-i18n="contact.hero.eyebrow">Let's build together</p>
+                <h1 data-i18n="contact.hero.heading">Tell me about the experience you want to create.</h1>
+                <p class="hero__lead" data-i18n="contact.hero.lead">
+                    Share your timeline, goals, and any sparks of inspiration. I will reply within 48 hours with next steps.
+                </p>
+            </div>
+        </section>
+        <!-- Contact section offers direct and form-based options -->
+        <section class="content content--contact">
+            <div class="shell">
+                <div class="contact-grid">
+                    <!-- Contact intro block highlights preferred channels -->
+                    <div class="contact-intro">
+                        <h2 data-i18n="contact.intro.title">Ways to connect</h2>
+                        <p data-i18n="contact.intro.copy">
+                            Whether you need a rapid launch or a long-term partner, I am ready to map out the path forward.
+                        </p>
+                        <ul class="contact-details">
+                            <li>
+                                <span class="contact-details__label" data-i18n="contact.details.emailLabel">Email</span>
+                                <a href="mailto:hello@astrimx.com" data-i18n="contact.details.emailValue">hello@astrimx.com</a>
+                            </li>
+                            <li>
+                                <span class="contact-details__label" data-i18n="contact.details.scheduleLabel">Schedule</span>
+                                <a href="https://cal.com" target="_blank" rel="noopener" data-i18n="contact.details.scheduleValue">Book a call</a>
+                            </li>
+                            <li>
+                                <span class="contact-details__label" data-i18n="contact.details.locationLabel">Location</span>
+                                <span data-i18n="contact.details.locationValue">Remote, serving clients worldwide</span>
+                            </li>
+                        </ul>
+                        <div class="contact-highlights">
+                            <h3 data-i18n="contact.highlights.title">What to expect next</h3>
+                            <ul class="feature-list feature-list--compact">
+                                <li data-i18n="contact.highlights.item1">Discovery call to align scope and success criteria</li>
+                                <li data-i18n="contact.highlights.item2">Strategy summary with milestones and investment</li>
+                                <li data-i18n="contact.highlights.item3">Dedicated communication channel for the build</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Contact form captures project specifics -->
+                    <form class="contact-form" action="#" method="post">
+                        <div class="form-field">
+                            <label for="name" data-i18n="contact.form.nameLabel">Name</label>
+                            <input type="text" id="name" name="name" placeholder="Who should I thank?" data-i18n-placeholder="contact.form.namePlaceholder" required>
+                        </div>
+                        <div class="form-field">
+                            <label for="email" data-i18n="contact.form.emailLabel">Email</label>
+                            <input type="email" id="email" name="email" placeholder="How do I reach you?" data-i18n-placeholder="contact.form.emailPlaceholder" required>
+                        </div>
+                        <div class="form-field form-field--split">
+                            <div>
+                                <label for="timeline" data-i18n="contact.form.timelineLabel">Timeline</label>
+                                <input type="text" id="timeline" name="timeline" placeholder="e.g. Launching in 8 weeks" data-i18n-placeholder="contact.form.timelinePlaceholder">
+                            </div>
+                            <div>
+                                <label for="budget" data-i18n="contact.form.budgetLabel">Budget</label>
+                                <input type="text" id="budget" name="budget" placeholder="Optional but appreciated" data-i18n-placeholder="contact.form.budgetPlaceholder">
+                            </div>
+                        </div>
+                        <div class="form-field">
+                            <label for="message" data-i18n="contact.form.messageLabel">Project Overview</label>
+                            <textarea id="message" name="message" rows="5" placeholder="Share the story, goals, and dream features." data-i18n-placeholder="contact.form.messagePlaceholder" required></textarea>
+                        </div>
+                        <button class="button button--primary" type="submit" data-i18n="contact.form.submit">Send Message</button>
+                    </form>
+                </div>
+                <!-- Contact badges set expectations on timing and scope -->
+                <div class="contact-badges">
+                    <article class="contact-badge">
+                        <p class="contact-badge__label" data-i18n="contact.badges.responseLabel">Average response</p>
+                        <p class="contact-badge__value" data-i18n="contact.badges.responseValue">48 hours</p>
+                    </article>
+                    <article class="contact-badge">
+                        <p class="contact-badge__label" data-i18n="contact.badges.kickoffLabel">Typical kickoff</p>
+                        <p class="contact-badge__value" data-i18n="contact.badges.kickoffValue">2 weeks</p>
+                    </article>
+                    <article class="contact-badge">
+                        <p class="contact-badge__label" data-i18n="contact.badges.projectsLabel">Project types</p>
+                        <p class="contact-badge__value" data-i18n="contact.badges.projectsValue">Marketing, product, platforms</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <!-- Contact CTA reassures clients about partnership -->
+        <section class="contact-cta">
+            <div class="shell">
+                <div class="cta__inner cta__inner--contact">
+                    <h2 data-i18n="contact.cta.title">Ready when you are.</h2>
+                    <p data-i18n="contact.cta.copy">Send over your ideas and I will shape a proposal with options that meet your pace and goals.</p>
+                    <a class="button button--ghost" href="pricing.html" data-i18n="contact.cta.button">Review Pricing Plans</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer with copyright note -->
+    <footer class="site-footer">
+        <div class="shell">
+            <p>&copy; <span id="year">2024</span> <span data-i18n="footer.copy">AstrimX Inc. Built with intention and curiosity.</span></p>
+        </div>
+    </footer>
+    <!-- Global language switcher script -->
+    <script src="lang.js" defer></script>
+</body>
+</html>

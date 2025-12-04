@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Document metadata and shared styles -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AstrimX Inc - About</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="about">
+    <!-- Header: brand identity and primary navigation -->
+    <header class="site-header">
+        <div class="shell">
+            <!-- Brand lockup -->
+            <div class="brand">
+                <a href="index.html" class="brand__link" data-i18n="brand.name">AstrimX Inc</a>
+                <p class="brand__tagline" data-i18n="brand.tagline">Tailored digital experiences for bold ideas</p>
+            </div>
+            <!-- Header controls: navigation and language switch -->
+            <div class="header-controls">
+                <!-- Primary navigation links -->
+                <nav class="site-nav" aria-label="Primary navigation">
+                    <ul class="site-nav__list">
+                        <li class="site-nav__item">
+                            <a class="site-nav__link" href="index.html" data-i18n="nav.home">Home</a>
+                        </li>
+                        <li class="site-nav__item site-nav__item--current">
+                            <a class="site-nav__link" href="about.html" aria-current="page" data-i18n="nav.about">About</a>
+                        </li>
+                        <li class="site-nav__item">
+                            <a class="site-nav__link" href="pricing.html" data-i18n="nav.pricing">Pricing</a>
+                        </li>
+                        <li class="site-nav__item">
+                            <a class="site-nav__link" href="contact.html" data-i18n="nav.contact">Contact</a>
+                        </li>
+                    </ul>
+                    <!-- Screen reader helper to announce current page -->
+                    <p class="sr-only" data-i18n-current aria-live="polite">Currently viewing: About</p>
+                </nav>
+                <!-- Language selector toggles -->
+                <div class="language-toggle" role="group" aria-label="Language selection">
+                    <button type="button" class="language-toggle__button is-active" data-lang="en">EN</button>
+                    <button type="button" class="language-toggle__button" data-lang="ro">RO</button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Main content: hero, methodology, and invite -->
+    <main>
+        <!-- Hero section introduces the practice philosophy -->
+        <section class="hero hero--subpage">
+            <div class="shell">
+                <p class="eyebrow" data-i18n="about.hero.eyebrow">About AstrimX</p>
+                <h1 data-i18n="about.hero.heading">Designing future-minded solutions with grounded strategy.</h1>
+                <p class="hero__lead" data-i18n="about.hero.lead">
+                    I blend product thinking, visual storytelling, and clean engineering so every project becomes a
+                    lightweight system you can grow with.
+                </p>
+            </div>
+        </section>
+        <!-- Content section outlines core working process -->
+        <section class="content">
+            <div class="shell">
+                <header class="section-header">
+                    <h2 data-i18n="about.process.title">The way I work</h2>
+                    <p data-i18n="about.process.subtitle">Every build follows a deliberate flow that keeps the experience sharp and the roadmap transparent.</p>
+                </header>
+                <div class="timeline">
+                    <article class="timeline__step">
+                        <header>
+                            <p class="timeline__step-index">01</p>
+                            <h3 data-i18n="about.process.step1.title">Discover the core</h3>
+                        </header>
+                        <p data-i18n="about.process.step1.copy">
+                            We unpack your vision, map the audience, and define the core interaction that should feel unforgettable.
+                        </p>
+                    </article>
+                    <article class="timeline__step">
+                        <header>
+                            <p class="timeline__step-index">02</p>
+                            <h3 data-i18n="about.process.step2.title">Architect the journey</h3>
+                        </header>
+                        <p data-i18n="about.process.step2.copy">
+                            Translating strategy into modular wireframes, I ensure we can scale content and features without friction.
+                        </p>
+                    </article>
+                    <article class="timeline__step">
+                        <header>
+                            <p class="timeline__step-index">03</p>
+                            <h3 data-i18n="about.process.step3.title">Refine and launch</h3>
+                        </header>
+                        <p data-i18n="about.process.step3.copy">
+                            We pressure-test microinteractions, optimize performance, and polish the interface until the hand-off feels effortless.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <!-- CTA section invites prospective partners -->
+        <section class="cta">
+            <div class="shell">
+                <div class="cta__inner">
+                    <h2 data-i18n="about.cta.title">Building a team? Let's collaborate.</h2>
+                    <p data-i18n="about.cta.copy">Pair my craft with your ambition and we will launch experiences people love to explore.</p>
+                    <a class="button button--primary" href="contact.html" data-i18n="about.cta.button">Book a discovery call</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer with copyright note -->
+    <footer class="site-footer">
+        <div class="shell">
+            <p>&copy; <span id="year">2024</span> <span data-i18n="footer.copy">AstrimX Inc. Built with intention and curiosity.</span></p>
+        </div>
+    </footer>
+    <!-- Global language switcher script -->
+    <script src="lang.js" defer></script>
+</body>
+</html>
