@@ -854,6 +854,14 @@ textarea:focus {
   main {
     padding: 3rem 1.5rem;
   }
+
+  .plan-grid {
+    grid-auto-rows: auto;
+  }
+
+  /* .contact-info dl {
+    align-items: center;
+  } */
 }
 
 @media (max-width: 600px) {
@@ -885,5 +893,53 @@ textarea:focus {
 
   .hero-emblem__label {
     letter-spacing: 0.2em;
+  }
+
+  .plan-grid {
+    grid-auto-rows: auto;
+  }
+
+  /* .contact-info dl {
+    align-items: center;
+  } */
+
+  .contact-info dl {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contact-info h3,
+  p {
+    margin: 0;
+  }
+
+  #contact_comp_name {
+    padding-bottom: 10px;
+  }
+
+  .github-profile {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .github-meta {
+    text-align: center;
+  }
+
+  .repo-tags {
+    justify-content: center;
+    padding: 0 0 10px 0;
+  }
+
+  .github-stats {
+    padding: 10px 0;
+  }
+
+  .github-meta strong {
+    padding: 0 0 10px 0;
+  }
+
+  .contact-form-card h3 {
+    margin: 0;
   }
 }

@@ -21,10 +21,7 @@
         </div>
         <ul class="nav-links">
           <li>
-            <a
-              href="#projects"
-              data-target="projects"
-              data-i18n="nav.projects"
+            <a href="#projects" data-target="projects" data-i18n="nav.projects"
               >Proiectele mele</a
             >
           </li>
@@ -104,15 +101,21 @@
           </div>
           <div class="hero-visual__chips">
             <div class="hero-chip">
-              <span class="hero-chip__label" data-i18n="hero.latencyLabel">Latenta</span>
+              <span class="hero-chip__label" data-i18n="hero.latencyLabel"
+                >Latenta</span
+              >
               <span class="hero-chip__value">36 ms</span>
             </div>
             <div class="hero-chip">
-              <span class="hero-chip__label" data-i18n="hero.deploysLabel">Lansari</span>
+              <span class="hero-chip__label" data-i18n="hero.deploysLabel"
+                >Lansari</span
+              >
               <span class="hero-chip__value">+184</span>
             </div>
             <div class="hero-chip">
-              <span class="hero-chip__label" data-i18n="hero.stackLabel">Stack</span>
+              <span class="hero-chip__label" data-i18n="hero.stackLabel"
+                >Stack</span
+              >
               <span class="hero-chip__value">HTML · CSS · JS</span>
             </div>
           </div>
@@ -126,8 +129,8 @@
           <!--<p class="eyebrow">/ 01</p> -->
           <h2 data-i18n="projects.heading">Proiectele mele</h2>
           <p data-i18n="projects.description">
-            O privire live asupra fluxurilor mele curente din GitHub, direct
-            din contul AstrimX.
+            O privire live asupra fluxurilor mele curente din GitHub, direct din
+            contul AstrimX.
           </p>
         </div>
         <div class="projects-grid">
@@ -191,10 +194,7 @@
                 >
               </div>
             </div>
-            <p
-              class="plan-description"
-              data-i18n="plans.standard.description"
-            >
+            <p class="plan-description" data-i18n="plans.standard.description">
               Landing page gata de lansare, cu text clar si interfata
               responsiva.
             </p>
@@ -241,9 +241,7 @@
               </div>
               <div class="plan-price-group">
                 <p class="plan-price">$35</p>
-                <span
-                  class="plan-price-note"
-                  data-i18n="plans.plus.priceNote"
+                <span class="plan-price-note" data-i18n="plans.plus.priceNote"
                   >Pana la 3 pagini</span
                 >
               </div>
@@ -364,7 +362,6 @@
 
       <section id="contact" class="panel contact-panel">
         <div class="section-header">
-          <p class="eyebrow">/ 03</p>
           <h2 data-i18n="contact.heading">Contacteaza AstrimX</h2>
           <p data-i18n="contact.description" data-i18n-mode="html">
             Porneste o discutie instant &mdash; fara tab-uri noi in inbox.
@@ -378,17 +375,16 @@
             </p>
             <dl>
               <dt data-i18n="contact.card.company">Companie</dt>
-              <dd>AstrimX</dd>
+              <dd id="contact_comp_name">AstrimX</dd>
               <dt data-i18n="contact.card.email">Email principal</dt>
               <dd>
-                <a href="mailto:astrimx.studio@gmail.com"
+                <a href="mailto:astrimx.contact@gmail.com"
                   >astrimx.contact@gmail.com</a
                 >
               </dd>
             </dl>
           </article>
 
-          
           <article class="card contact-form-card">
             <h3 data-i18n="contact.form.heading">Trimite un brief direct</h3>
             <p class="helper" data-i18n="contact.form.helper">
@@ -408,7 +404,10 @@
                 data-i18n-attr="placeholder:form.name.placeholder"
               />
 
-              <label class="input-label" for="email" data-i18n="form.email.label"
+              <label
+                class="input-label"
+                for="email"
+                data-i18n="form.email.label"
                 >Email</label
               >
               <input
