@@ -69,12 +69,8 @@ a {
 }
 
 .hero-grid {
-  display: grid;
-  grid-template-columns: minmax(0, 1.1fr) minmax(260px, 380px);
-  align-items: center;
-  gap: clamp(2rem, 5vw, 4.5rem);
-  position: relative;
   z-index: 1;
+  margin-top: 150px;
 }
 
 .hero-visual {
@@ -793,6 +789,139 @@ textarea:focus {
   color: var(--muted);
 }
 
+.portfolio-hero {
+  background: radial-gradient(
+      circle at 12% 20%,
+      rgba(168, 107, 255, 0.24),
+      transparent 35%
+    ),
+    radial-gradient(
+      circle at 85% 18%,
+      rgba(104, 248, 214, 0.28),
+      transparent 38%
+    ),
+    linear-gradient(150deg, #060c1f, #020308 72%);
+}
+
+.portfolio-main {
+  position: relative;
+}
+
+.portfolio-badges {
+  margin-top: 1.25rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.45rem 0.9rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.project-card {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.project-card::before {
+  content: "";
+  position: absolute;
+  inset: -30% 10% auto auto;
+  width: 220px;
+  height: 220px;
+  background: radial-gradient(
+    circle,
+    rgba(104, 248, 214, 0.15),
+    transparent 60%
+  );
+  filter: blur(18px);
+  opacity: 0.8;
+  z-index: 0;
+}
+
+.project-card__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.project-title {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.project-title h3 {
+  margin: 0;
+}
+
+.project-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.35rem 0.8rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.project-note {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.project-description {
+  margin: 0.35rem 0 0;
+  color: var(--muted);
+}
+
+.project-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.project-tags .tag {
+  padding: 0.35rem 0.75rem;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+}
+
 @keyframes heroOrbPulse {
   0% {
     transform: translate(-50%, -50%) scale(0.92);
@@ -830,14 +959,21 @@ textarea:focus {
 }
 
 @media (max-width: 960px) {
-  .nav-links {
-    display: none;
+  .nav-bar {
+    display: flex;
+    flex-direction: column;
   }
 
-  .nav-bar {
+  .nav-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* .nav-bar {
     flex-wrap: wrap;
     justify-content: space-between;
-  }
+  } */
 
   .hero {
     padding: 2rem 1.5rem 3rem;
@@ -845,10 +981,15 @@ textarea:focus {
 
   .hero-grid {
     grid-template-columns: 1fr;
+    margin-top: 50px;
   }
 
   .hero-visual {
     min-height: 320px;
+  }
+
+  .hero-actions {
+    margin-top: 20px;
   }
 
   main {
@@ -857,6 +998,10 @@ textarea:focus {
 
   .plan-grid {
     grid-auto-rows: auto;
+  }
+
+  #myportofolio-nav-b {
+    display: none;
   }
 
   /* .contact-info dl {
@@ -870,6 +1015,17 @@ textarea:focus {
     padding: 1.5rem;
   }
 
+  .nav-bar {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
   .input-row {
     flex-direction: column;
   }
@@ -879,7 +1035,6 @@ textarea:focus {
   }
 
   .cta {
-    width: 100%;
     text-align: center;
   }
 
@@ -941,5 +1096,15 @@ textarea:focus {
 
   .contact-form-card h3 {
     margin: 0;
+  }
+
+  .project-card__top,
+  .project-meta {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .portfolio-grid {
+    grid-template-columns: 1fr;
   }
 }

@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="ro">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AstrimX | My Portofolio</title>
+    <meta
+      name="description"
+      content="Portofoliul live AstrimX: proiecte rapide, futuriste, lansate pe GitHub Pages."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body>
+    <header class="hero portfolio-hero">
+      <nav class="nav-bar">
+        <div class="brand">
+          <span class="brand-glow"></span>
+          AstrimX
+        </div>
+        <ul class="nav-links">
+          <li>
+            <a href="../index.html" data-i18n="nav.dashboard">Dashboard</a>
+          </li>
+          <li>
+            <a href="../index.html#projects" data-i18n="nav.projects"
+              >Proiectele mele</a
+            >
+          </li>
+          <li>
+            <a href="../index.html#plans" data-i18n="nav.plans">Planuri</a>
+          </li>
+          <li id="myportofolio-nav-b">
+            <a href="./" aria-current="page" data-i18n="nav.portfolio"
+              >My portofolio</a
+            >
+          </li>
+          <li>
+            <a href="../index.html#contact" data-i18n="nav.contact">Contact</a>
+          </li>
+          <li>
+            <a href="../policy.html" target="_blank" data-i18n="nav.policy"
+              >Privacy policy</a
+            >
+          </li>
+        </ul>
+        <div class="language-toggle" role="group" aria-label="Select language">
+          <button
+            class="lang-btn active"
+            type="button"
+            data-lang="ro"
+            aria-pressed="true"
+          >
+            RO
+          </button>
+          <button
+            class="lang-btn"
+            type="button"
+            data-lang="en"
+            aria-pressed="false"
+          >
+            EN
+          </button>
+        </div>
+        <a
+          class="cta ghost"
+          href="../index.html"
+          data-i18n="portfolio.cta.dashboard"
+          >Intoarce-te la dashboard</a
+        >
+      </nav>
+
+      <div class="hero-grid">
+        <div class="hero-content">
+          <p class="eyebrow" data-i18n="portfolio.eyebrow">Portofoliu live</p>
+          <h1 data-i18n="portfolio.title">
+            Experiente rapide construite si lansate real
+          </h1>
+          <p class="subtitle" data-i18n="portfolio.subtitle">
+            Selectie curenta de proiecte publice gazduite pe GitHub Pages, cu
+            focus pe viteza, claritate si micro-animatii.
+          </p>
+          <div class="hero-actions">
+            <a
+              class="cta primary"
+              href="#live"
+              data-i18n="portfolio.cta.primary"
+              >Vezi proiectele live</a
+            >
+            <a
+              class="cta secondary"
+              href="../index.html#contact"
+              data-i18n="portfolio.cta.secondary"
+              >Cere un proiect similar</a
+            >
+          </div>
+          <div class="portfolio-badges">
+            <span class="pill" data-i18n="portfolio.badge.count"
+              >4 proiecte live</span
+            >
+            <span class="pill" data-i18n="portfolio.badge.fast"
+              >Sub 1s LCP pe desktop</span
+            >
+            <span class="pill" data-i18n="portfolio.badge.stack"
+              >HTML / CSS / JavaScript</span
+            >
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="portfolio-main">
+      <section id="live" class="panel portfolio-panel">
+        <div class="section-header">
+          <h2 data-i18n="portfolio.live.heading">Lansari reale</h2>
+          <p data-i18n="portfolio.live.description">
+            Carduri cu proiectele mele preferate. Fiecare link deschide instant
+            versiunea live, gata de explorat.
+          </p>
+        </div>
+
+        <div class="portfolio-grid">
+          <article class="card project-card">
+            <div class="project-card__top">
+              <div class="project-title">
+                <h3>ShopIT</h3>
+                <span
+                  class="project-pill"
+                  data-i18n="portfolio.projects.shopit.tag"
+                  >E-commerce UI</span
+                >
+              </div>
+              <span class="project-note" data-i18n="portfolio.card.note"
+                >Lansat pe GitHub Pages</span
+              >
+            </div>
+            <p
+              class="project-description"
+              data-i18n="portfolio.projects.shopit.desc"
+            >
+              Landing dedicat pentru un magazin online, cu layout modular,
+              accent pe conversie si experienta clara de cumparare.
+            </p>
+            <div class="project-meta">
+              <div class="project-tags">
+                <span class="tag">HTML</span>
+                <span class="tag">CSS</span>
+                <span class="tag">JavaScript</span>
+              </div>
+              <a
+                class="cta secondary"
+                href="https://alexandru-07.github.io/shop-it/"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-i18n="portfolio.card.cta"
+                >Vezi live</a
+              >
+            </div>
+          </article>
+
+          <article class="card project-card">
+            <div class="project-card__top">
+              <div class="project-title">
+                <h3>Atelier Aura</h3>
+                <span
+                  class="project-pill"
+                  data-i18n="portfolio.projects.aura.tag"
+                  >Atelier creativ</span
+                >
+              </div>
+              <span class="project-note" data-i18n="portfolio.card.note"
+                >Lansat pe GitHub Pages</span
+              >
+            </div>
+            <p
+              class="project-description"
+              data-i18n="portfolio.projects.aura.desc"
+            >
+              Website elegant pentru un atelier de creatie, cu estetica
+              luminoasa, accent pe storytelling si galerie curata.
+            </p>
+            <div class="project-meta">
+              <div class="project-tags">
+                <span class="tag">HTML</span>
+                <span class="tag">CSS</span>
+                <span class="tag">JavaScript</span>
+              </div>
+              <a
+                class="cta secondary"
+                href="https://alexandru-07.github.io/aura-workshop/"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-i18n="portfolio.card.cta"
+                >Vezi live</a
+              >
+            </div>
+          </article>
+
+          <article class="card project-card">
+            <div class="project-card__top">
+              <div class="project-title">
+                <h3>Agro Animals</h3>
+                <span
+                  class="project-pill"
+                  data-i18n="portfolio.projects.agro.tag"
+                  >Brand agricol</span
+                >
+              </div>
+              <span class="project-note" data-i18n="portfolio.card.note"
+                >Lansat pe GitHub Pages</span
+              >
+            </div>
+            <p
+              class="project-description"
+              data-i18n="portfolio.projects.agro.desc"
+            >
+              Landing prietenos pentru un brand agricol, cu sectiuni aerisite si
+              iconografie clara pentru servicii.
+            </p>
+            <div class="project-meta">
+              <div class="project-tags">
+                <span class="tag">HTML</span>
+                <span class="tag">CSS</span>
+                <span class="tag">JavaScript</span>
+              </div>
+              <a
+                class="cta secondary"
+                href="https://alexandru-07.github.io/agro-animals/"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-i18n="portfolio.card.cta"
+                >Vezi live</a
+              >
+            </div>
+          </article>
+
+          <article class="card project-card">
+            <div class="project-card__top">
+              <div class="project-title">
+                <h3>Solar System</h3>
+                <span
+                  class="project-pill"
+                  data-i18n="portfolio.projects.solar.tag"
+                  >Experimente JS</span
+                >
+              </div>
+              <span class="project-note" data-i18n="portfolio.card.note"
+                >Lansat pe GitHub Pages</span
+              >
+            </div>
+            <p
+              class="project-description"
+              data-i18n="portfolio.projects.solar.desc"
+            >
+              Primul proiect in care am folosit intens JavaScript si CSS pentru
+              a construi o explorare 3D stilizata a sistemului solar.
+            </p>
+            <div class="project-meta">
+              <div class="project-tags">
+                <span class="tag">HTML</span>
+                <span class="tag">CSS</span>
+                <span class="tag">JavaScript</span>
+              </div>
+              <a
+                class="cta secondary"
+                href="https://alexandru-07.github.io/solar-system/"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-i18n="portfolio.card.cta"
+                >Vezi live</a
+              >
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="panel gradient-panel portfolio-panel">
+        <div class="section-header">
+          <h2 data-i18n="portfolio.secondary.heading">
+            Ai nevoie de un site nou?
+          </h2>
+          <p data-i18n="portfolio.secondary.description">
+            Daca vibe-ul acestor proiecte iti place, pot construi rapid o
+            experienta similara pentru brandul tau, cu aceeasi atentie la
+            detalii si viteza.
+          </p>
+        </div>
+        <div class="hero-actions">
+          <a
+            class="cta ghost"
+            href="../index.html"
+            data-i18n="portfolio.cta.dashboard"
+            >Intoarce-te la dashboard</a
+          >
+          <a
+            class="cta primary"
+            href="../index.html#contact"
+            data-i18n="portfolio.cta.contact"
+            >Trimite un brief</a
+          >
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>
+        &copy; <span id="year"></span>
+        <span data-i18n="footer.credit" data-i18n-mode="html"
+          >AstrimX &middot; Creat de Anghel Alexandru</span
+        >
+      </p>
+    </footer>
+
+    <script src="../app.js" defer></script>
+  </body>
+</html>

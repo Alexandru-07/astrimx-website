@@ -3,7 +3,36 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AstrimX // Futuristic Studio</title>
+    <title>AstrimX — Fast Front-End Websites & Landing Pages</title>
+    <meta
+      name="description"
+      content="AstrimX builds fast landing pages and modern front-end websites for founders, freelancers, and small businesses. Clean code, responsive design, and fast delivery."
+    />
+    <!-- Open Graph (social share preview) -->
+    <meta property="og:title" content="AstrimX — Modern Front-End Studio" />
+    <meta
+      property="og:description"
+      content="Fast and clean landing pages built for founders."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://astrimx.com/" />
+    <meta
+      property="og:image"
+      content="https://astrimx.com/assets/og-cover.png"
+    />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="AstrimX — Modern Front-End Studio" />
+    <meta
+      name="twitter:description"
+      content="Fast and clean landing pages built for founders."
+    />
+    <meta
+      name="twitter:image"
+      content="https://astrimx.com/assets/og-cover.png"
+    />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -12,6 +41,7 @@
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
+  <script src="https://web3forms.com/client/script.js" async defer></script>
   <body>
     <header class="hero">
       <nav class="nav-bar">
@@ -31,8 +61,16 @@
             >
           </li>
           <li>
+            <a href="portofolio/" data-i18n="nav.portfolio">My portofolio</a>
+          </li>
+          <li>
             <a href="#contact" data-target="contact" data-i18n="nav.contact"
               >Contact</a
+            >
+          </li>
+          <li>
+            <a href="policy.html" target="_blank" data-i18n="nav.policy"
+              >Privacy policy</a
             >
           </li>
         </ul>
@@ -84,40 +122,9 @@
             >
               Vezi proiectele
             </button>
-          </div>
-        </div>
-        <div class="hero-visual" aria-hidden="true">
-          <div class="hero-visual__glow"></div>
-          <div class="hero-emblem">
-            <span class="hero-emblem__ring hero-emblem__ring--outer"></span>
-            <span class="hero-emblem__ring hero-emblem__ring--middle"></span>
-            <span class="hero-emblem__ring hero-emblem__ring--inner"></span>
-            <span class="hero-emblem__pulse"></span>
-            <div class="hero-emblem__core">
-              <span class="hero-emblem__initials">AX</span>
-              <span class="hero-emblem__label">AstrimX</span>
-              <span class="hero-emblem__tag">Digital Atelier</span>
-            </div>
-          </div>
-          <div class="hero-visual__chips">
-            <div class="hero-chip">
-              <span class="hero-chip__label" data-i18n="hero.latencyLabel"
-                >Latenta</span
-              >
-              <span class="hero-chip__value">36 ms</span>
-            </div>
-            <div class="hero-chip">
-              <span class="hero-chip__label" data-i18n="hero.deploysLabel"
-                >Lansari</span
-              >
-              <span class="hero-chip__value">+184</span>
-            </div>
-            <div class="hero-chip">
-              <span class="hero-chip__label" data-i18n="hero.stackLabel"
-                >Stack</span
-              >
-              <span class="hero-chip__value">HTML · CSS · JS</span>
-            </div>
+            <a class="cta ghost" href="portofolio/" data-i18n="hero.portfolioCta"
+              >My portofolio</a
+            >
           </div>
         </div>
       </div>
@@ -388,13 +395,34 @@
           <article class="card contact-form-card">
             <h3 data-i18n="contact.form.heading">Trimite un brief direct</h3>
             <p class="helper" data-i18n="contact.form.helper">
-              Mesajele pleaca printr-un client de mail securizat. Trimiterea
-              directa in Gmail necesita un backend dedicat.
+              Mesajele sunt trimise prin Web3Forms folosind conexiuni
+              securizate. Primești răspuns direct pe email.
             </p>
-            <form id="contact-form" autocomplete="on">
-              <label class="input-label" for="name" data-i18n="form.name.label"
-                >Nume complet</label
-              >
+
+            <form
+              id="contact-form"
+              autocomplete="on"
+              action="https://api.web3forms.com/submit"
+              method="POST"
+            >
+              <!-- Web3Forms access key -->
+              <input
+                type="hidden"
+                name="access_key"
+                value="eefdeb3e-0a9d-4871-bea0-2ef52bdfb75b"
+              />
+
+              <!-- Honeypot anti-bot (nu se vede) -->
+              <input
+                type="checkbox"
+                name="botcheck"
+                class="hidden"
+                style="display: none"
+              />
+
+              <label class="input-label" for="name" data-i18n="form.name.label">
+                Nume complet
+              </label>
               <input
                 id="name"
                 name="name"
@@ -408,8 +436,9 @@
                 class="input-label"
                 for="email"
                 data-i18n="form.email.label"
-                >Email</label
               >
+                Email
+              </label>
               <input
                 id="email"
                 name="email"
@@ -423,8 +452,9 @@
                 class="input-label"
                 for="message"
                 data-i18n="form.message.label"
-                >Detalii proiect</label
               >
+                Detalii proiect
+              </label>
               <textarea
                 id="message"
                 name="message"
@@ -433,6 +463,24 @@
                 required
                 data-i18n-attr="placeholder:form.message.placeholder"
               ></textarea>
+
+              <!-- GDPR consent -->
+              <label class="input-label gdpr-label">
+                <input type="checkbox" name="gdpr" required />
+                <span>
+                  Sunt de acord ca datele mele (nume, email, mesaj) să fie
+                  folosite pentru a fi contactat în legătură cu acest proiect.
+                </span>
+              </label>
+
+              <!-- Redirect după trimitere reușită -->
+              <input
+                type="hidden"
+                name="redirect"
+                value="https://astrimx.com/thank-you.html"
+              />
+
+              <div class="h-captcha" data-captcha="true"></div>
 
               <button class="cta primary" type="submit" data-i18n="form.submit">
                 Trimite mesajul
