@@ -1107,4 +1107,17 @@ textarea:focus {
   .portfolio-grid {
     grid-template-columns: 1fr;
   }
+
+  .captcha-wrapper {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .h-captcha {
+    transform: scale(0.85);
+    transform-origin: left;
+  }
+  .captcha-wrap {
+    height: 78px;
+  }
 }
