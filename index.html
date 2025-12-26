@@ -61,16 +61,21 @@
             >
           </li>
           <li>
-            <a href="portofolio/" data-i18n="nav.portfolio">My portofolio</a>
-          </li>
-          <li>
             <a href="#contact" data-target="contact" data-i18n="nav.contact"
               >Contact</a
             >
           </li>
           <li>
+            <a href="portfolio/" data-i18n="nav.portfolio">My portfolio</a>
+          </li>
+          <li>
             <a href="policy.html" target="_blank" data-i18n="nav.policy"
               >Privacy policy</a
+            >
+          </li>
+          <li>
+            <a href="terms.html" target="_blank" data-i18n="nav.terms"
+              >Terms &amp; Conditions</a
             >
           </li>
         </ul>
@@ -122,11 +127,8 @@
             >
               Vezi proiectele
             </button>
-            <a
-              class="cta ghost"
-              href="portofolio/"
-              data-i18n="hero.portfolioCta"
-              >My portofolio</a
+            <a class="cta ghost" href="portfolio/" data-i18n="hero.portfolioCta"
+              >My portfolio</a
             >
           </div>
         </div>
@@ -380,8 +382,12 @@
         <div class="contact-grid">
           <article class="card contact-info">
             <h3 data-i18n="contact.card.heading">Comandamentul AstrimX</h3>
-            <p data-i18n="contact.card.subheading" data-i18n-mode="html">
-              Anghel Alexandru &mdash; Programator &amp; CEO
+            <p
+              id="card-subheading-p"
+              data-i18n="contact.card.subheading"
+              data-i18n-mode="html"
+            >
+              Anghel Alexandru - Programator &amp; CEO
             </p>
             <dl>
               <dt data-i18n="contact.card.company">Companie</dt>
@@ -461,7 +467,7 @@
               <textarea
                 id="message"
                 name="message"
-                rows="4"
+                rows="5"
                 placeholder="Descrie site-ul, obiectivele si deadline-ul."
                 required
                 data-i18n-attr="placeholder:form.message.placeholder"
@@ -469,8 +475,13 @@
 
               <!-- GDPR consent -->
               <label class="input-label gdpr-label">
-                <input type="checkbox" name="gdpr" required />
-                <span>
+                <input
+                  id="gdpr-label-input"
+                  type="checkbox"
+                  name="gdpr"
+                  required
+                />
+                <span data-i18n="form.gdpr">
                   Sunt de acord ca datele mele (nume, email, mesaj) să fie
                   folosite pentru a fi contactat în legătură cu acest proiect.
                 </span>
@@ -504,6 +515,14 @@
         >
       </p>
     </footer>
+
+    <button
+      class="back-to-top"
+      type="button"
+      aria-label="Inapoi la bara de navigare"
+    >
+      <span aria-hidden="true">&#8593;</span>
+    </button>
 
     <script src="app.js" defer></script>
   </body>

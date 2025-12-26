@@ -2,11 +2,14 @@ const languageButtons = document.querySelectorAll(".lang-btn");
 const translatableElements = document.querySelectorAll("[data-i18n]");
 const attributeElements = document.querySelectorAll("[data-i18n-attr]");
 const footerYear = document.getElementById("year");
+const backToTopButton = document.querySelector(".back-to-top");
 
 const translations = {
   ro: {
     "nav.dashboard": "Dashboard",
     "nav.portfolio": "Portofoliul meu",
+    "nav.policy": "Politica de confidentialitate",
+    "nav.terms": "Termeni & Conditii",
     "nav.contact": "Contact",
     "cta.contact": "Contacteaza-ne",
     "hero.eyebrow": "Conform GDPR // Confidentialitate",
@@ -96,7 +99,9 @@ const translations = {
   },
   en: {
     "nav.dashboard": "Dashboard",
-    "nav.portfolio": "My Portofolio",
+    "nav.portfolio": "My Portfolio",
+    "nav.policy": "Privacy policy",
+    "nav.terms": "Terms & Conditions",
     "nav.contact": "Contact",
     "cta.contact": "Contact us",
     "hero.eyebrow": "GDPR aligned // Privacy",
@@ -241,6 +246,16 @@ const updateYear = () => {
   }
 };
 
+const scrollToNav = () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+};
+
+const toggleBackToTop = () => {
+  if (!backToTopButton) return;
+  const shouldShow = window.scrollY > 220;
+  backToTopButton.classList.toggle("visible", shouldShow);
+};
+
 const setLanguage = (lang) => {
   if (!translations[lang]) return;
   currentLanguage = lang;
@@ -257,5 +272,9 @@ languageButtons.forEach((button) => {
     setLanguage(lang);
   });
 });
+
+backToTopButton?.addEventListener("click", scrollToNav);
+window.addEventListener("scroll", toggleBackToTop);
+toggleBackToTop();
 
 setLanguage(defaultLanguage);

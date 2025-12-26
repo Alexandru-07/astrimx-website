@@ -9,6 +9,7 @@ const planButtons = document.querySelectorAll("[data-plan-note]");
 const languageButtons = document.querySelectorAll(".lang-btn");
 const translatableElements = document.querySelectorAll("[data-i18n]");
 const attributeElements = document.querySelectorAll("[data-i18n-attr]");
+const backToTopButton = document.querySelector(".back-to-top");
 
 const translations = {
   ro: {
@@ -18,6 +19,7 @@ const translations = {
     "nav.dashboard": "Dashboard",
     "nav.contact": "Contact",
     "nav.policy": "Politica de confidentialitate",
+    "nav.terms": "Termeni & Conditii",
     "nav.cta": "Scrie-mi",
     "hero.eyebrow": "Anghel Alexandru // Programator + CEO",
     "hero.title": "O experienta disponibila tuturor.",
@@ -137,7 +139,7 @@ const translations = {
     "contact.description":
       "Porneste o discutie instant &mdash; fara tab-uri noi in inbox.",
     "contact.card.heading": "Comandamentul AstrimX",
-    "contact.card.subheading": "Anghel Alexandru &mdash; Programator &amp; CEO",
+    "contact.card.subheading": "Anghel Alexandru - Programator &amp; CEO",
     "contact.card.company": "Companie",
     "contact.card.email": "Email principal",
     "contact.form.heading": "Trimite un brief direct",
@@ -148,7 +150,10 @@ const translations = {
     "form.email.label": "Email",
     "form.email.placeholder": "tu@example.com",
     "form.message.label": "Detalii proiect",
-    "form.message.placeholder": "Descrie site-ul, obiectivele si deadline-ul.",
+    "form.message.placeholder":
+      "Descrie pe scurt site-ul dorit, obiectivele și un deadline. Vei fi contactat pentru detalii suplimentare.",
+    "form.gdpr":
+      "SUNT DE ACORD CA DATELE MELE (NUME, EMAIL, MESAJ) SĂ FIE FOLOSITE PENTRU A FI CONTACTAT ÎN LEGĂTURĂ CU ACEST PROIECT.",
     "form.submit": "Trimite mesajul",
     "footer.credit": "AstrimX &middot; Creat de Anghel Alexandru",
     "github.loading": "Incarc datele GitHub pentru @Alexandru-07...",
@@ -168,18 +173,19 @@ const translations = {
   en: {
     "nav.projects": "My Projects",
     "nav.plans": "Plans",
-    "nav.portfolio": "My Portofolio",
+    "nav.portfolio": "My Portfolio",
     "nav.dashboard": "Dashboard",
     "nav.contact": "Contact",
     "nav.policy": "Privacy policy",
+    "nav.terms": "Terms & Conditions",
     "nav.cta": "Get in Touch",
-    "hero.eyebrow": "Anghel Alexandru // Programmer + CEO",
+    "hero.eyebrow": "Anghel Alexandru - Programmer & CEO",
     "hero.title": "An experience available to everyone.",
     "hero.subtitle":
       "From concept to launch, AstrimX delivers crisp interfaces, performant frontends, and immersive product stories crafted for ambitious founders.",
     "hero.primaryCta": "Explore Plans",
     "hero.secondaryCta": "View Projects",
-    "hero.portfolioCta": "My Portofolio",
+    "hero.portfolioCta": "My Portfolio",
     "hero.latencyLabel": "Latency",
     "hero.deploysLabel": "Deploys",
     "hero.stackLabel": "Stack",
@@ -299,7 +305,10 @@ const translations = {
     "form.email.label": "Email",
     "form.email.placeholder": "you@example.com",
     "form.message.label": "Project Notes",
-    "form.message.placeholder": "Describe your site, goals, and deadline.",
+    "form.message.placeholder":
+      "Describe briefly the desired website, objectives, and a deadline. You will be contacted for further details.",
+    "form.gdpr":
+      "I AGREE THAT MY DATA (NAME, EMAIL, MESSAGE) MAY BE USED TO CONTACT ME REGARDING THIS PROJECT.",
     "form.submit": "Send Message",
     "footer.credit": "AstrimX &middot; Crafted by Anghel Alexandru",
     "github.loading": "Loading GitHub data for @Alexandru-07...",
@@ -385,6 +394,16 @@ const scrollToSection = (targetId) => {
   section.scrollIntoView({ behavior: "smooth", block: "start" });
 };
 
+const scrollToNav = () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+};
+
+const toggleBackToTop = () => {
+  if (!backToTopButton) return;
+  const shouldShow = window.scrollY > 280;
+  backToTopButton.classList.toggle("visible", shouldShow);
+};
+
 scrollLinks.forEach((link) => {
   link.addEventListener("click", (event) => {
     const anchor = event.currentTarget;
@@ -397,6 +416,10 @@ scrollLinks.forEach((link) => {
     scrollToSection(target);
   });
 });
+
+backToTopButton?.addEventListener("click", scrollToNav);
+window.addEventListener("scroll", toggleBackToTop);
+toggleBackToTop();
 
 planButtons.forEach((button) => {
   button.addEventListener("click", () => {

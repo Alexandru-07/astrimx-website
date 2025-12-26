@@ -2,11 +2,68 @@
 <html lang="ro">
   <head>
     <meta charset="UTF-8" />
-    <title>Mulțumesc – AstrimX</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Multumesc | AstrimX</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      .thankyou-shell {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 4rem 1.5rem 6rem;
+      }
+
+      .thankyou-card {
+        max-width: 680px;
+        width: min(90vw, 720px);
+        padding: 2.5rem;
+        border-radius: 20px;
+        border: 1px solid var(--border);
+        background: var(--surface-strong);
+        box-shadow: var(--shadow);
+        text-align: center;
+      }
+
+      .thankyou-card h1 {
+        margin: 0 0 1rem;
+        font-size: clamp(2rem, 5vw, 2.75rem);
+      }
+
+      .thankyou-card p {
+        color: var(--muted);
+        margin: 0 0 1.25rem;
+      }
+
+      .thankyou-card a {
+        color: var(--accent);
+        font-weight: 600;
+      }
+    </style>
   </head>
   <body>
-    <h1>Mulțumesc!</h1>
-    <p>Mesajul tău a fost trimis cu succes. Îți voi răspunde în curând.</p>
-    <a href="/">Înapoi la pagina principală</a>
+    <main class="thankyou-shell">
+      <div class="thankyou-card">
+        <h1>Multumesc!</h1>
+        <p>Mesajul tau a fost trimis cu succes. Iti voi raspunde in curand.</p>
+        <a href="/">Inapoi la pagina principala</a>
+      </div>
+    </main>
+
+    <button
+      class="back-to-top"
+      type="button"
+      aria-label="Inapoi la bara de navigare"
+    >
+      <span aria-hidden="true">&#8593;</span>
+    </button>
+
+    <script src="app.js" defer></script>
   </body>
 </html>
