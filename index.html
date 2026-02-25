@@ -8,6 +8,10 @@
       name="description"
       content="AstrimX builds fast landing pages and modern front-end websites for founders, freelancers, and small businesses. Clean code, responsive design, and fast delivery."
     />
+    <link rel="canonical" href="https://astrimx.com/" />
+    <meta name="robots" content="index,follow,max-image-preview:large" />
+    <meta property="og:site_name" content="AstrimX" />
+    <meta property="og:locale" content="ro_RO" />
     <!-- Open Graph (social share preview) -->
     <meta property="og:title" content="AstrimX — Modern Front-End Studio" />
     <meta
@@ -32,6 +36,29 @@
       name="twitter:image"
       content="https://astrimx.com/assets/og-cover.png"
     />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://astrimx.com/#organization",
+            "name": "AstrimX",
+            "url": "https://astrimx.com/",
+            "logo": "https://astrimx.com/assets/og-cover.png",
+            "email": "mailto:astrimx.contact@gmail.com"
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://astrimx.com/#website",
+            "url": "https://astrimx.com/",
+            "name": "AstrimX",
+            "publisher": { "@id": "https://astrimx.com/#organization" },
+            "inLanguage": ["ro", "en"]
+          }
+        ]
+      }
+    </script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -69,12 +96,12 @@
             <a href="portfolio/" data-i18n="nav.portfolio">My portfolio</a>
           </li>
           <li>
-            <a href="policy.html" target="_blank" data-i18n="nav.policy"
+            <a href="policy.html" target="_blank" rel="noopener" data-i18n="nav.policy"
               >Privacy policy</a
             >
           </li>
           <li>
-            <a href="terms.html" target="_blank" data-i18n="nav.terms"
+            <a href="terms.html" target="_blank" rel="noopener" data-i18n="nav.terms"
               >Terms &amp; Conditions</a
             >
           </li>
