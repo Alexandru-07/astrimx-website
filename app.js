@@ -36,6 +36,8 @@ const translations = {
     "portfolio.title": "Experiente rapide construite si lansate real",
     "portfolio.subtitle":
       "Selectie curenta de proiecte publice gazduite pe GitHub Pages, cu focus pe viteza, claritate si micro-animatii.",
+    "portfolio.disclaimer":
+      "Proiecte demonstrative realizate pentru portofoliul AstrimX.",
     "portfolio.cta.primary": "Vezi proiectele live",
     "portfolio.cta.secondary": "Cere un proiect similar",
     "portfolio.badge.count": "4 proiecte live",
@@ -194,6 +196,8 @@ const translations = {
     "portfolio.title": "Fast experiences shipped to production",
     "portfolio.subtitle":
       "Current selection of public projects hosted on GitHub Pages, focused on speed, clarity, and thoughtful motion.",
+    "portfolio.disclaimer":
+      "Demo projects created for the AstrimX portfolio.",
     "portfolio.cta.primary": "View live builds",
     "portfolio.cta.secondary": "Request a similar build",
     "portfolio.badge.count": "4 live builds",
